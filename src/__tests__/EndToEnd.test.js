@@ -1,8 +1,8 @@
-import puppeteer from 'puppeteer';
+import puppeteer from "puppeteer";
 
 describe("show/hide an event details", () => {
-    let browser;
-    let page;
+  let browser;
+  let page;
  
     beforeAll(async () => {
       jest.setTimeout(15000);
@@ -65,7 +65,7 @@ describe("show/hide an event details", () => {
         ".event",
         (element) => element.length
       );
-      expect(numOfEvents).toBe(32);
+      expect(numOfEvents).toBe(2);
     });
  
     test("User should see a list of suggestions when they search for a city", async () => {
