@@ -23,6 +23,7 @@ import EventGenre from "./EventGenre";
 
   updateEvents = (location, eventCount) => {
     getEvents().then((events) => {
+      console.log("Get events success")
       const locationEvents =
         location === "all"
           ? events
