@@ -43,7 +43,7 @@ module.exports.getAuthURL = async () => {
 module.exports.getAccessToken = async (event) => {
   const oAuth2Client = new OAuth2(client_id, client_secret, redirect_uris[0]);
   const code = decodeURIComponent(`${event.pathParameters.code}`);
-
+  console.log("Get Access Token")
   return new Promise((resolve, reject) => {
     oAuth2Client.getToken(code, (err, token) => {
       if (err) {

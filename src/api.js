@@ -22,7 +22,10 @@
       `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
     )
       .then((res) => res.json())
-      .catch((error) => error.json());
+      .catch((error) => {
+        console.log(error.json())
+        return error.json()
+      });
  
     return result;
   };
@@ -51,8 +54,12 @@
       .then((res) => {
         return res.json();
       })
-      .catch((error) => error);
+      .catch((error) => {
+        console.log(error)
+        return error
+      });
  
+    console.log("Access Token", access_token)
     access_token && localStorage.setItem("access_token", access_token);
  
     return access_token;
@@ -75,6 +82,8 @@
    }
  
     const token = await getAccessToken();
+
+    console.log("Token", token)
  
     if (token) {
       removeQuery();
