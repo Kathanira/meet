@@ -140,7 +140,8 @@ import EventGenre from "./EventGenre";
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => {
-            getAccessToken();
+            console.log("About to call getAccessToken")
+            getAccessToken()
           }}
         />
       </div>

@@ -18,6 +18,7 @@
 
 
   export const checkToken = async (accessToken) => {
+    console.log("Check AccessToken", accessToken)
     const result = await fetch(
       `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
     )
@@ -61,6 +62,7 @@
  
     console.log("Access Token", access_token)
     access_token && localStorage.setItem("access_token", access_token);
+    localStorage.setItem("Test", "test")
  
     return access_token;
   };
@@ -109,6 +111,7 @@
       await localStorage.removeItem("access_token");
       const searchParams = new URLSearchParams(window.location.search);
       const code = await searchParams.get("code");
+      console.log("Get Code from Params", code)
       if (!code) {
         const results = await axios.get(
           "https://iu2wbfqgb9.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url"

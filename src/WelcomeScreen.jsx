@@ -1,6 +1,8 @@
 import React from "react";
 import './WelcomeScreen.css';
+
 function WelcomeScreen(props) {
+  console.log("Welcome Screen Props", props)
   return props.showWelcomeScreen ?
     (
       <div className="WelcomeScreen">
@@ -32,7 +34,7 @@ o.svg"
 </div>
         </div>
         <a
-          href="https://Kathanira.github.io/meet/privacy.html"
+          href="https://kathanira.github.io/meet/privacy.html"
           rel="nofollow noopener"
         >
           Privacy policy
