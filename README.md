@@ -96,3 +96,6 @@ Show a chart with the number of upcoming events in each city
 Given the user hasn't searched a specific city 
 When the user opens the app 
 Then a chart with an overview, indicating the number of upcoming events by city will be shown.
+
+![Meet](https://user-images.githubusercontent.com/112494140/216560289-4c69ecb8-015a-4705-a8ce-064d4a4f2d07.jpg)
+
